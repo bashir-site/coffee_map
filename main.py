@@ -1,9 +1,18 @@
+from flask import Flask, render_template
 import json
 import requests
 from geopy import distance
 import folium
 from dotenv import load_dotenv
 import os
+
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 
 def draw_map(my_location, coffee_locations):
@@ -63,3 +72,4 @@ if __name__ == '__main__':
     print("Ваши координаты: ", my_cordinates)
     min_dict = sorted(get_coffee_shops_info(my_cordinates), key=lambda x: x['distance'])[:5]
     draw_map(my_cordinates, min_dict)
+    app.run('0.0.0.0')
