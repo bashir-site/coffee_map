@@ -27,6 +27,71 @@ The next step is to install the necessary modules. This command will help:
 pip install -r requirements.txt
 ```
 
+## Description of the Data Structure
+
+The program works with a JSON file whose structure looks like a list of dictionaries:
+```bash
+  [
+    {
+      "global_id": 1061827454,
+      "Latitude_WGS84": "55.7849277658219190",
+      "ID": "00280872",
+      "Name": "ÏÐÀÂDÀ Êîôå",
+      "IsNetObject": "äà",
+      "OperatingCompany": "ÏÐÀÂDÀ Êîôå",
+      "TypeObject": "êàôåòåðèé",
+      "AdmArea": "Ñåâåðíûé àäìèíèñòðàòèâíûé îêðóã",
+      "District": "ðàéîí Áåãîâîé",
+      "Address": "ãîðîä Ìîñêâà, óëèöà Ïðàâäû, äîì 8, êîðïóñ 49",
+      "PublicPhone": [
+        {
+          "PublicPhone": "(800) 555-19-66"
+        }
+      ],
+      "SeatsCount": 0,
+      "SocialPrivileges": "íåò",
+      "Longitude_WGS84": "37.5789000000000040",
+      "geoData": {
+        "type": "Point",
+        "coordinates": [
+          37.578900000000004,
+          55.78492776582192
+        ]
+      }
+    },
+    {
+      "global_id": 1061827455,
+      "Latitude_WGS84": "55.6394907237606730",
+      "ID": "00278418",
+      "Name": "ÏÐÀÂDÀ Êîôå",
+      "IsNetObject": "äà",
+      "OperatingCompany": "ÏÐÀÂDÀ Êîôå",
+      "TypeObject": "êàôåòåðèé",
+      "AdmArea": "Þæíûé àäìèíèñòðàòèâíûé îêðóã",
+      "District": "ðàéîí Ìîñêâîðå÷üå-Ñàáóðîâî",
+      "Address": "ãîðîä Ìîñêâà, Êàíòåìèðîâñêàÿ óëèöà, äîì 58",
+      "PublicPhone": [
+        {
+          "PublicPhone": "íåò òåëåôîíà"
+        }
+      ],
+      "SeatsCount": 4,
+      "SocialPrivileges": "íåò",
+      "Longitude_WGS84": "37.6445210000000050",
+      "geoData": {
+        "type": "Point",
+        "coordinates": [
+          37.644521000000005,
+          55.63949072376067
+        ]
+      }
+    },
+    ...
+    ...
+  ]
+```
+
+You can make the same json data structure by yourself or download this data structure from this website https://data.mos.ru/opendata
 
 ## Usage
 

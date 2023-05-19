@@ -64,12 +64,13 @@ def get_coffee_shops_info(my_location):
         count += 1
     return list_coffee_shops
 
-
+from pprint import pprint
 if __name__ == '__main__':
     load_dotenv()
     yandex_geo_key = os.getenv('YANDEX_GEO_KEY')
     my_cordinates = fetch_coordinates(yandex_geo_key, input("Где вы находитесь? "))
     print("Ваши координаты: ", my_cordinates)
     min_dict = sorted(get_coffee_shops_info(my_cordinates), key=lambda x: x['distance'])[:5]
+    pprint(min_dict)
     draw_map(my_cordinates, min_dict)
     app.run('0.0.0.0')
