@@ -1,6 +1,6 @@
 # Coffee shopts checker
 
-Coffee shopts checker is a Python script thats find close coffee shops based on your location. 
+Coffee shopts checker is a Python script thats find close coffee shops based on your location. Then he launches a site with a map in which these 5 coffees are located.
 
 ## Installation
 
@@ -113,39 +113,6 @@ You need to wrote some place in Moscow. For example:
 ```
 
 After pressing Enter button, you will see this output:
-
-```bash
-Ваши координаты:  ('37.621202', '55.753544')
-[{'distance': 0.07830555782131858,
-  'latitude': 37.621529,
-  'longitude': 55.754660757023636,
-  'title': 'Bosco Cafe'},
- {'distance': 0.07830555782131858,
-  'latitude': 37.621529,
-  'longitude': 55.754660757023636,
-  'title': 'КОФЕМАНИЯ'},
- {'distance': 0.1972945556737127,
-  'latitude': 37.626224999999984,
-  'longitude': 55.75321475660388,
-  'title': 'Кофейня Просвет'},
- {'distance': 0.24545510779907528,
-  'latitude': 37.621987746,
-  'longitude': 55.75706419199997,
-  'title': 'Кофе Хауз'},
- {'distance': 0.2999999367411837,
-  'latitude': 37.614625717781195,
-  'longitude': 55.75579132932476,
-  'title': 'Кофе Хауз'}]
-```
-
-this script show you top 5 coffee shops that being near to your location. 
-
-Then you can run `site.py` file that showed you the exact location of this shops on the map.
-You need to run `site.py` file with this command:
-
-```bash
-python site.py
-```
 
 and then you'll see this output on the console:
 ```bash
