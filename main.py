@@ -7,10 +7,6 @@ from dotenv import load_dotenv
 import os
 
 
-app = Flask(__name__)
-
-
-@app.route('/')
 def home():
     return render_template('index.html')
 
@@ -72,9 +68,10 @@ def main():
     min_dict = sorted(get_coffee_shops_info(my_cordinates), key=lambda x: x['distance'])[:5]
     draw_map(my_cordinates, min_dict)
 
+    app = Flask(__name__)
+    app.add_url_rule('/', 'home', home)
+    app.run('0.0.0.0')
+
 
 if __name__ == '__main__':
-
     main()
-
-    app.run('0.0.0.0')
