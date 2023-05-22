@@ -7,6 +7,14 @@ from dotenv import load_dotenv
 import os
 
 
+app = Flask(__name__)
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+
 def draw_map(my_location, coffee_locations):
     m = folium.Map(location=list(my_location)[::-1], zoom_start=12, tiles="Stamen Terrain")
 
@@ -58,18 +66,15 @@ def get_coffee_shops_info(my_location):
 
 
 def main():
-    app = Flask(__name__)
-    @app.route('/')
-    def home():
-        return render_template('index.html')
-
     load_dotenv()
     yandex_geo_key = os.getenv('YANDEX_GEO_KEY')
     my_cordinates = fetch_coordinates(yandex_geo_key, input("Где вы находитесь? "))
     min_dict = sorted(get_coffee_shops_info(my_cordinates), key=lambda x: x['distance'])[:5]
     draw_map(my_cordinates, min_dict)
-    app.run('0.0.0.0')
 
 
 if __name__ == '__main__':
+
     main()
+
+    app.run('0.0.0.0')
